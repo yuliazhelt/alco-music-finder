@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<body bgcolor="#b998ca">
+	<h1 align="center">
+		<font color="white" size="25" face="Century Schoolbook">
+			<b>
+				Ваши рекомендации:
+			</b>
+		</font>
+	</h1>
+		{% for index in range(form_data_len) %}
+			<div style="height:auto; width:750px;  margin: auto; background-color:white; border-radius: 50px;" align="center">
+				<img src={{form_data['img'][index]}} height="200px" align="center">
+				  <a href="{{form_data['url'][index]}}">
+					<font color="#b8dbc7" size="5" face="Century Schoolbook">
+						{{form_data["name"][index]}}
+					</font>
+				  </a>
+			</div>
+			<div style="height:50px; width:750px;  margin: auto; background-color:#b998ca; border-radius: 50px;" align="center"></div>
+		{% endfor %}
+	</body>
+</html>
